@@ -3,7 +3,9 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters, ContextTypes
 from parser import extract_text_from_pdf, parse_rate_info
 
-BOT_TOKEN = "YOUR_BOT_TOKEN"  # Replace with your token
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("📄 Send me a PDF rate confirmation to extract data.")
