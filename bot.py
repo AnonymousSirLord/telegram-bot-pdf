@@ -4,7 +4,7 @@ from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, fil
 from parser import extract_text_from_pdf, parse_rate_info
 
 import os
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("8081119332:AAFdVuY8pPdkcLt54jn7L8jT-nSsfhoD_2s")
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
