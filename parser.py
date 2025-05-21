@@ -13,6 +13,6 @@ def parse_rate_info(text):
     info['Rate'] = re.findall(r'\$\s?\d+(?:,\d+)?(?:\.\d{2})?', text)
     info['Pickup Date'] = re.findall(r'Pickup(?: Date)?:?\s*(\d{1,2}/\d{1,2}/\d{2,4})', text, re.I)
     info['Delivery Date'] = re.findall(r'Delivery(?: Date)?:?\s*(\d{1,2}/\d{1,2}/\d{2,4})', text, re.I)
-    info['Shipper'] = re.findall(r'Shipper(?: Name)?:?\s*(.*)', text)
-    info['Consignee'] = re.findall(r'Consignee(?: Name)?:?\s*(.*)', text)
+    info['Origin'] = re.findall(r'Shipper(?: Name)?:?\s*(.*)', text)
+    info['Destination'] = re.findall(r'Consignee(?: Name)?:?\s*(.*)', text)
     return info
